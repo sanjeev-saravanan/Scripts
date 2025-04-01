@@ -1,19 +1,19 @@
 #!/bin/bash
 
-# Backup script to AWS S3 with reporting
+
 
 # Configuration variables
-SOURCE_DIR="/home/sanjeev/Task"          # Directory to backup
-S3_BUCKET="s3://my-backup-bucket-sanjeev-2025"  # S3 bucket URL
+SOURCE_DIR="/home/sanjeev/Task"          
+S3_BUCKET="s3://my-backup-bucket-sanjeev-2025"  
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 BACKUP_NAME="backup_$TIMESTAMP.tar.gz"
 TEMP_DIR="/tmp/backup_$TIMESTAMP"
-LOG_FILE="/home/sanjeev/backup_report_$TIMESTAMP.log"  # Changed to user-writable directory
+LOG_FILE="/home/sanjeev/backup_report_$TIMESTAMP.log" 
 
 # Colors for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
-NC='\033[0m' # No Color
+NC='\033[0m'
 
 # Function to log messages
 log_message() {
