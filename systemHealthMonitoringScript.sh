@@ -6,8 +6,8 @@ MEMORY_THRESHOLD=80
 DISK_THRESHOLD=90
 PROCESS_THRESHOLD=100
 LOG_FILE="$HOME/system_health.log"
-CHECK_INTERVAL=10  # Seconds between checks
-PID_FILE="$HOME/system_health.pid"  # Store PID for easy stopping
+CHECK_INTERVAL=10 
+PID_FILE="$HOME/system_health.pid" 
 
 # Ensure log file directory is writable
 [ -w "$(dirname "$LOG_FILE")" ] || { echo "Error: Cannot write to $LOG_FILE" >&2; exit 1; }
